@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dedicated to Thandiswa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<div class="container">
+
+  <h1 class="title">Happy Valentine's Thandiswa</h1>
+
+  <!-- Slideshow -->
+  <div class="slideshow">
+    <div class="slide active" style="background-image: url('Thandiswa1.jpg');"></div>
+    <div class="slide" style="background-image: url('Thandiswa2.png');"></div>
+    <div class="slide" style="background-image: url('Thandiswa3.jpg');"></div>
+	<div class="slide" style="background-image: url('Thandiswa4.jpg');"></div>
+	<div class="slide" style="background-image: url('Thandiswa5.jpg');"></div>
+
+ 
+  </div>
+
+  <!-- Custom Audio Controls -->
+  <div class="audio-controls">
+    <audio id="audioPlayer" src="Sha_Sha_feat._DJ_Maphorisa_Kabza_De_Small_-_Tender_Love_(mp3.pm).mp3"></audio>
+    <button class="audio-btn play" onclick="document.getElementById('audioPlayer').play()">▶ Play</button>
+    <button class="audio-btn pause" onclick="document.getElementById('audioPlayer').pause()">◼️ Pause</button>
+  </div>
+
+  <!-- Romantic “lyrics-style” animation -->
+  <div class="lyrics">
+    <span class="line" style="animation-delay: 0s">For Being The best Ntwana❤️</span>
+    <span class="line" style="animation-delay: 4s">This is my token of appareciation ✨</span>
+    <span class="line" style="animation-delay: 8s">Keep on Being the great person that you are 💖</span>
+    <span class="line" style="animation-delay: 12s">Happy Valentine’s Day,Ntwana yam 🌹</span>
+    <span class="line" style="animation-delay: 16s">Forever my ntwana, now and always ❤️</span>
+	<span class="line" style="animation-delay: 20s">Play your Fav song, and Enjoy❤️</span>
+  </div>
+
+</div>
+
+<script>
+// SLIDESHOW
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slide");
+
+function autoSlide() {
+  slides.forEach(slide => slide.classList.remove("active"));
+  slideIndex++;
+  if (slideIndex >= slides.length) slideIndex = 0;
+  slides[slideIndex].classList.add("active");
+}
+
+setInterval(autoSlide, 4000);
+
+function changeSlide(direction) {
+  slideIndex += direction;
+  if (slideIndex >= slides.length) slideIndex = 0;
+  if (slideIndex < 0) slideIndex = slides.length - 1;
+  slides.forEach(slide => slide.classList.remove("active"));
+  slides[slideIndex].classList.add("active");
+}
+</script>
+
+</body>
+</html>
